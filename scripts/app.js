@@ -16,9 +16,17 @@ Variables:
 */
 
 let tree= {}
+axeButton = document.getElementById('axeButton');
+sawButton = document.getElementById('sawButton');
+healAllButton = document.getElementById('healAllButton');
+treImage = document.getElementById('tree');
+healthNum = document.getElementById('hNum');
 
+/*
 
-
+build objects:
+object is a tree
+*/
 tree = {
     health: 100,
     conditions: 
@@ -36,31 +44,13 @@ tree = {
 
 
 
-
-
-
-
-
-/*
-
-build objects:
-object is a tree
-*/
-
-
-
-/*
-build tools user uses to affect tree
-
-
-
-*/
-
 /*
 on click functions
 
 
 */
+
+
 
 /*
 functions for radio specific buttons

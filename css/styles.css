@@ -2,7 +2,7 @@
   margin-left: 2em;
   
 }
-.healthNum{
+.healthNum , .healthCon{
   font-weight: 600;
 }
 
@@ -21,4 +21,7 @@ header{
 
 body{
   background:lightgreen;
+}
+span{
+  padding: 1em;
 }
