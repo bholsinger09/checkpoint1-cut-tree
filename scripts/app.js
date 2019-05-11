@@ -23,9 +23,12 @@ tree = {
     health: 100,
     conditions: 
         {healthyAndGrowing: { maxHealth: 100, minHealth: 75, description: "Healthy and Growing", enumNum: 0},
-         aFewChipsMissing: {}
+         aFewChipsMissing: {maxHealth: 74, minHealth: 50, description: "a few chips missing", enumNum: 0 },
+         falling: {maxHealth: 49, minHealth: 25, description: "falling tree", enumNum: 0 },
+         lonelyStub: {maxHealth: 24, minHealth: 0, description: "lonely stub", enumNum: 0 }
 
-        }, "a few chips missing", "falling over", "lonely stub" },
+        }
+         
 
 };
 
