@@ -13,13 +13,25 @@ this three buttons must affect the object status in different amounts
 
 /*
 Variables:
-
-let tree= {};
-
-
-
-
 */
+
+let tree= {}
+
+
+
+tree = {
+    health: 100,
+    conditions: 
+        {healthyAndGrowing: { maxHealth: 100, minHealth: 75, description: "Healthy and Growing", enumNum: 0},
+         aFewChipsMissing: {}
+
+        }, "a few chips missing", "falling over", "lonely stub" },
+
+};
+
+
+
+
 
 
 
@@ -30,10 +42,6 @@ let tree= {};
 
 build objects:
 object is a tree
-
-
-
-
 */
 
 
@@ -46,7 +54,7 @@ build tools user uses to affect tree
 */
 
 /*
-functions for buttons
+on click functions
 
 
 */

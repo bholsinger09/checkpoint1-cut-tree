@@ -13,7 +13,7 @@
 <body>
   <!--this is where the header is going to be-->
   <header>
-    <h1>Cut The Tree</h1>
+    <h1 id = "header">Cut The Tree</h1>
   </header>
 
   <main>
@@ -21,13 +21,18 @@
     <!--This is where background of tree will be -->
 
 
-    <div class="container" id="treeContainer">
+    <div class="container " id="treeContainer">
+        
       <!--This is where two rows will be-->
       <div class="row align-items-end">
         <!--This row contains a health column-->
         <div class="col-6" id="treeStats"></div>
+        
         <!--this column contains trees health properties inside a div-->
-        <p>health of tree: </p><span id="healthNum">100</span>
+        <p class = 'healthNum'>health of tree: </p><span class="healthNum">100</span>
+      </div>
+      <div class="col-6" id="imgContainer">
+          <img src="img/201905111315041000.jpg" class= "img-thumbnail img-responsive img-rounded" id="tree" alt="healthy tree">
       </div>
     </div>
     <div class="container" id="userTools">
@@ -35,10 +40,13 @@
       <div class="row">
         <!-- this row will contain 4 columns and will be located under tree-->
         <div class="col"></div>
+        <button type="button" class="btn btn-primary" id="axeButton">axe</button>
         <!--this column is for axe-->
         <div class="col"></div>
+        <button type="button" class="btn btn-primary" id = "sawButton">saw</button>
         <!--this column is for saw-->
         <div class="col"></div>
+        <button type="button" class="btn btn-primary" id ="healallButton">healall</button>
         <!--this column is for heal all -->
         <div class="col"></div>
         <!-- this column is for div of sharpness radio button-->

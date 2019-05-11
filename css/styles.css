@@ -1,8 +1,24 @@
 #treeStats{
   margin-left: 2em;
+  
+}
+.healthNum{
+  font-weight: 600;
 }
 
-#treeContainer{
-  
-  background-image: url('..img/201905111315041000.jpg');
+#tree{
+  max-width: 50%;
+  max-height: 50%;
+}
+
+button{
+  margin: 2em;
+}
+header{
+  text-align-last: center;
+  padding-bottom: 10em;
+}
+
+body{
+  background:lightgreen;
 }
