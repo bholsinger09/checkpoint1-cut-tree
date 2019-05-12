@@ -15,8 +15,7 @@ this three buttons must affect the object status in different amounts
 Variables:
 */
 
-let tree= {}
-axeButton = document.getElementById('axeButton');
+let axeButton = document.getElementById('axeButton');
 sawButton = document.getElementById('sawButton');
 healAllButton = document.getElementById('healAllButton');
 treImage = document.getElementById('tree');
@@ -24,48 +23,44 @@ healthNum = document.getElementById('hNum');
 healthCon = document.getElementById('hcon');
 
 /*
-
-build objects:
-object is a tree
+Classes
 */
-tree = {
-    health: 100,
-    conditions: 
-        {healthyAndGrowing: { maxHealth: 100, minHealth: 75, description: "Healthy and Growing", enumNum: 0},
-         aFewChipsMissing: {maxHealth: 74, minHealth: 50, description: "a few chips missing", enumNum: 0 },
-         falling: {maxHealth: 49, minHealth: 25, description: "falling tree", enumNum: 0 },
-         lonelyStub: {maxHealth: 24, minHealth: 0, description: "lonely stub", enumNum: 0 }
 
-        }
-         
-
-};
-
-
-
-function cutTreeHealth(){
-    
-    let i = healthNum.innerText
-    let maxHealthHealthy = tree.conditions.healthyAndGrowing.maxHealth;
-    let minHealthHealthy = tree.conditions.healthyAndGrowing.minHealth;
-    let maxHealthCut = tree.conditions.aFewChipsMissing.maxHealth;
-    let minHealthCut = tree.conditions.aFewChipsMissing.minHealth;
-    let maxHealthfalling = tree.conditions.falling.maxHealth;
-    let minHealthfalling = tree.conditions.falling.minHealth;
-    let maxHealthStub = tree.conditions.lonelyStub.maxHealth;
-    let minHealthStub = tree.conditions.lonelyStub.minHealth;
-
-    
-   i--
-    
-    // for ( i = 100; i <= maxHealthHealthy  && i >= minHealthHealthy; i-- ){
-    //      console.log(i);
-    //      console.log (tree.conditions.healthyAndGrowing.description)
-    //  }
-    
-     
-
+class Tree {
+    constructor() {
+        this.health = 100;
+        this.conditions = {healthyAndGrowing: { maxHealth: 100, minHealth: 75, description: "Healthy and Growing"},
+        aFewChipsMissing: {maxHealth: 74, minHealth: 50, description: "a few chips missing"},
+        falling: {maxHealth: 49, minHealth: 25, description: "falling tree"},
+        lonelyStub: {maxHealth: 24, minHealth: 0, description: "lonely stub"}
+       } 
+        updateUI = function () {
+            var currentCondtion = this.getCondition();
+        };
+        getCondition = function () {
+            var condition = null;
+            this.conditions.array.forEach(element => {
+                if (element.maxHealth >= this.health && element.minHealth < this.health) {
+                    condition = element;
+                    
+                }
+            });
+            return condition;
+        };
+    }
+    static adustHealth(healthAdjustment) {
+        this.health += healthAdjustment;
+        this.updateUI;
+    }
 }
+
+var tree = new Tree();
+
+
+
+
+    
+    
 
 
 
