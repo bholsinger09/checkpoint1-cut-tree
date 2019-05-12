@@ -21,6 +21,7 @@ sawButton = document.getElementById('sawButton');
 healAllButton = document.getElementById('healAllButton');
 treImage = document.getElementById('tree');
 healthNum = document.getElementById('hNum');
+healthCon = document.getElementById('hcon');
 
 /*
 
@@ -42,10 +43,35 @@ tree = {
 
 
 
+function cutTreeHealth(){
+    
+    let i = healthNum.innerText
+    let maxHealthHealthy = tree.conditions.healthyAndGrowing.maxHealth;
+    let minHealthHealthy = tree.conditions.healthyAndGrowing.minHealth;
+    let maxHealthCut = tree.conditions.aFewChipsMissing.maxHealth;
+    let minHealthCut = tree.conditions.aFewChipsMissing.minHealth;
+    let maxHealthfalling = tree.conditions.falling.maxHealth;
+    let minHealthfalling = tree.conditions.falling.minHealth;
+    let maxHealthStub = tree.conditions.lonelyStub.maxHealth;
+    let minHealthStub = tree.conditions.lonelyStub.minHealth;
+
+    
+
+    
+    for ( i = 100; i <= maxHealthHealthy  && i >= minHealthHealthy; i-- ){
+         console.log(i);
+         healthCon.innerText = tree.conditions.healthyAndGrowing.description
+     }
+    
+     
+
+}
+
 
 
 /*
 on click functions
+
 
 
 */
@@ -69,9 +95,4 @@ actions that change the page layout such as different picture
 */
 
 
-/*
-functions that need used at start of page
 
-*/
-
-//initialize/call functions here
