@@ -56,12 +56,12 @@ function cutTreeHealth(){
     let minHealthStub = tree.conditions.lonelyStub.minHealth;
 
     
-
+   i--
     
-    for ( i = 100; i <= maxHealthHealthy  && i >= minHealthHealthy; i-- ){
-         console.log(i);
-         healthCon.innerText = tree.conditions.healthyAndGrowing.description
-     }
+    // for ( i = 100; i <= maxHealthHealthy  && i >= minHealthHealthy; i-- ){
+    //      console.log(i);
+    //      console.log (tree.conditions.healthyAndGrowing.description)
+    //  }
     
      
 
@@ -85,14 +85,7 @@ functions for radio specific buttons
 
 
 
-/*
-draw function
-this has methods that are use when user performs
-actions that change the page layout such as different picture
 
-
-
-*/
 
 
 
