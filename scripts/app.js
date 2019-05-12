@@ -72,7 +72,7 @@ class Tree {
 
         */
         this.health += healthAdjustment;
-        this.updateUI();
+        this.updateUI;
     }
 }
 
@@ -91,6 +91,27 @@ class Axe {
     }
 }
 var axe = new Axe();
+
+class Saw{
+    constructor(){
+
+    };
+}
+var saw = new Saw();
+
+class Refresh {
+    constructor(){
+
+    };
+}
+var refresh = new Refresh();
+
+class Disable{
+    constructor(){
+
+    };
+}
+var disable = new Disable();
 
 
 
