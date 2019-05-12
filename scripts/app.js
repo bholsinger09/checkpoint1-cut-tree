@@ -20,7 +20,10 @@ let axeButton = document.getElementById('axeButton'),
     healAllButton = document.getElementById('healAllButton'),
     treImage = document.getElementById('tree'),
     healthNum = parseInt(document.getElementById('hNum').innerText),
-    healthCon = document.getElementById('hcon')
+    healthCon = document.getElementById('hcon'),
+    sharpTool = document.getElementById('sharpTool'),
+    dullTool = document.getElementById('dullTool'),
+    disableTool = document.getElementById('disableTool')
 
 /*
 Classes
