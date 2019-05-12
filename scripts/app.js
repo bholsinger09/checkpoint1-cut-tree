@@ -19,12 +19,13 @@ let axeButton = document.getElementById('axeButton'),
     sawButton = document.getElementById('sawButton'),
     healAllButton = document.getElementById('healAllButton'),
     treImage = document.getElementById('tree'),
-    healthNum = document.getElementById('hNum'),
+    healthNum = parseInt(document.getElementById('hNum').innerText),
     healthCon = document.getElementById('hcon')
 
 /*
 Classes
 */
+
 
 class Tree {
     constructor() {
@@ -41,6 +42,7 @@ class Tree {
         this.updateUI = function () {
             //function to update changes on the page
             var currentCondtion = this.getCondition();
+
 
         };
         this.getCondition = function () {
@@ -67,12 +69,25 @@ class Tree {
 
         */
         this.health += healthAdjustment;
-        this.updateUI;
+        this.updateUI();
     }
 }
 
+
 var tree = new Tree();
 
+class Axe {
+    constructor() {
+        this.damage = function () {
+            tree.updateUI()
+
+
+
+        };
+
+    }
+}
+var axe = new Axe();
 
 
 
@@ -81,19 +96,15 @@ var tree = new Tree();
 
 
 
-/*
-on click functions
 
 
 
-*/
 
 
 
-/*
-functions for radio specific buttons
 
-*/
+
+
 
 
 

@@ -42,20 +42,35 @@
       <div class="row">
         <!-- this row will contain 4 columns and will be located under tree-->
         <div class="col"></div>
-        <button type="button" class="btn btn-primary" id="axeButton" onclick="">axe</button>
+        <button type="button" class="btn btn-primary" id="axeButton "
+          onclick="tree.updateUI(), tree.getCondition(), tree.adustHealth() ">axe</button>
         <!--this column is for axe-->
         <div class="col"></div>
         <button type="button" class="btn btn-primary" id="sawButton">saw</button>
         <!--this column is for saw-->
         <div class="col"></div>
-        <button type="button" class="btn btn-primary" id="healAllButton">heal all</button>
+        <button type="button" class="btn btn-primary" id="healAllButton">rebirth</button>
         <!--this column is for heal all -->
         <div class="col"></div>
         <!-- this column is for div of sharpness radio button-->
 
       </div>
     </div>
-
+    <div class="container" id="toolsConditions"></div>
+    <div class="conditionRadios">
+      <input type="radio" id="sharpTool" class="toolCondition">
+      <label class="labelCondition">sharpen tools</label>
+    </div>
+    <div class="container" id="toolsConditions"></div>
+    <div class="conditionRadios">
+      <input type="radio" id="dullTool" class="toolCondition">
+      <label class="labelCondition">dull tools</label>
+    </div>
+    <div class="container" id="toolsConditions"></div>
+    <div class="conditionRadios">
+      <input type="radio" id="disableTool" class="toolCondition">
+      <label class="labelCondition">disable tools</label>
+    </div>
 
 
 
