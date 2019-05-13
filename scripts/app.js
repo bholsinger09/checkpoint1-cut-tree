@@ -45,6 +45,7 @@ class Tree {
     };
 
     _getCondition = function () {
+        //using _ to keep function as a private function
         /*
         this will get the current condition and compare it to the conditions object
 
