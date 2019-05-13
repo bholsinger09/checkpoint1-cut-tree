@@ -17,10 +17,8 @@ Variables:
 
 let axeButton = document.getElementById('axeButton'),
     sawButton = document.getElementById('sawButton'),
-    healAllButton = document.getElementById('healAllButton'),
-    treImage = document.getElementById('tree'),
-    healthNum = parseInt(document.getElementById('hNum').innerText),
-    healthCon = document.getElementById('hcon'),
+   
+   
     sharpTool = document.getElementById('sharpTool'),
     dullTool = document.getElementById('dullTool'),
     disableTool = document.getElementById('disableTool')
@@ -37,10 +35,10 @@ class Tree {
 
         this.health = 100;
         this.conditions = {
-            healthyAndGrowing: { maxHealth: 100, minHealth: 75, description: "Healthy and Growing" },
-            aFewChipsMissing: { maxHealth: 74, minHealth: 50, description: "a few chips missing" },
-            falling: { maxHealth: 49, minHealth: 25, description: "falling tree" },
-            lonelyStub: { maxHealth: 24, minHealth: 0, description: "lonely stub" }
+            healthyAndGrowing: { maxHealth: 100, minHealth: 75, description: "Healthy and Growing",imgfile :'img/healthy.jpg'  },
+            aFewChipsMissing: { maxHealth: 74, minHealth: 50, description: "a few chips missing",imgfile: 'img/damaged.jpg' },
+            falling: { maxHealth: 49, minHealth: 25, description: "falling tree", imgfile: 'img/falling.jpg' },
+            lonelyStub: { maxHealth: 24, minHealth: 0, description: "lonely stub", imgfile: 'img/stub' }
         }
         this.updateUI = function () {
             //function to update changes on the page
@@ -48,6 +46,8 @@ class Tree {
             var $treeImage = $('#tree');
             var $healthNumber = $('#hnum');
             $healthNumber.html = (this.health);
+            $treeImgage = (this.imgfile);
+
 
 
 
@@ -59,8 +59,8 @@ class Tree {
             */
             var condition = null;           
             this.conditions.array.forEach(treeEl => {
-                if (treeEl.maxHealth >= this.health && treeEl.minHealth < this.health) {
-                    condition = treeEl;
+                if (conditionEl.maxHealth >= this.health && conditionEl.minHealth < this.health) {
+                    condition = conditionEl;
 
                 }
             });
@@ -83,43 +83,32 @@ var tree = new Tree();
 
 class Axe {
     constructor() {
-        this.damage = -20;        
+        this.cutTree = -20;        
     };
     static swingAtTree(){
-        tree.adjustHealth(this.damage);
+        tree.adjustHealth(this.cutTree);
     }
 }
 var axe = new Axe();
 
-class Saw{
-    constructor(){
-
+class saw {
+    constructor() {
+        this.cutTree = -10;        
     };
+    static swingAtTree(){
+        tree.adjustHealth(this.cutTree);
+    }
 }
 var saw = new Saw();
-
-class Refresh {
-    constructor(){
-
-    };
-}
-var refresh = new Refresh();
-
-class Disable{
-    constructor(){
-
-    };
-}
-var disable = new Disable();
-
-
-
-
 
 
 
 $('#axeButton').onClick(function(){
-    axe.swingAtTree();
+    axe.swingAtTree(5);
+})
+
+$('#sawButton').onClick(function(){
+    axe.swingAtTree(2);
 })
 
 
