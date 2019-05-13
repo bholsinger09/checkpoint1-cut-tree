@@ -45,6 +45,10 @@ class Tree {
         this.updateUI = function () {
             //function to update changes on the page
             var currentCondtion = this.getCondition();
+            var $treeImage = $('#tree');
+            var $healthNumber = $('#hnum');
+            $healthNumber.html = (this.health);
+
 
 
         };
@@ -53,8 +57,7 @@ class Tree {
             this will get the current condition and compare it to the conditions object
 
             */
-            var condition = null;
-            //this sets the current condition to null
+            var condition = null;           
             this.conditions.array.forEach(treeEl => {
                 if (treeEl.maxHealth >= this.health && treeEl.minHealth < this.health) {
                     condition = treeEl;
@@ -73,21 +76,17 @@ class Tree {
         */
         this.health += healthAdjustment;
         this.updateUI;
-    }
+    }    
 }
-
 
 var tree = new Tree();
 
 class Axe {
     constructor() {
-        this.damage = function () {
-            tree.updateUI()
-
-
-
-        };
-
+        this.damage = -20;        
+    };
+    static swingAtTree(){
+        tree.adjustHealth(this.damage);
     }
 }
 var axe = new Axe();
@@ -119,9 +118,9 @@ var disable = new Disable();
 
 
 
-
-
-
+$('#axeButton').onClick(function(){
+    axe.swingAtTree();
+})
 
 
 
