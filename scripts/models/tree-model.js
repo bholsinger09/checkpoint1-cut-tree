@@ -4,7 +4,12 @@
 
 
 
-class Tree {
+
+
+
+
+
+export default class TreeModel {
     constructor() {
         //constructor builds the tree object
         // using keyword "this" to work on the object
@@ -60,45 +65,5 @@ class Tree {
     }
 }
 
-class Axe {
-    constructor() {
-        this.conditions = {
-            sharp: { damage: -30, description: "sharp" },
-            normal: { damage: -20, description: "normal" },
-            dull: { damage: -10, description: "dull" },
-            disabled: { damage: 0, description: "disabled" }
-        }
-        this.condition = this.conditions.normal
-    };
-    swingAtTree = function () {
-        tree.adjustHealth(this.condition.damage);
-    }
-}
 
-class Saw {
-    constructor() {
-        this.conditions = {
-            sharp: { damage: -20, description: "sharp" },
-            normal: { damage: -10, description: "normal" },
-            dull: { damage: -5, description: "dull" },
-            disabled: { damage: 0, description: "disabled" }
-        }
-
-        this.condition = this.conditions.normal
-    };
-    sawTree = function () {
-        tree.adjustHealth(this.condition.damage);
-    }
-}
-
-
-export default class cutTreeDownModel {
-    constructor() {
-
-
-    }
-    getTreeObject() { let tree = new Tree }
-    getAxeObject() { let axe = new Axe }
-    getSawObject() { let saw = new Saw }
-}
 

@@ -1,3 +1,6 @@
+
+import TreeControler from "./components/tree-controler.js";
+
 //requirments
 
 /*
@@ -20,11 +23,13 @@ this three buttons must affect the object status in different amounts
 /*
 Import controler
 */
+let treeController = new TreeControler
+
 class TreeApp {
     constructor() {
-        this.treeControler = {
+        this.controllers = {
             //instatiate tree controler
-
+            treeController
         }
     }
 
