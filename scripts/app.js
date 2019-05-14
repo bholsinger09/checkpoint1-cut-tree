@@ -11,7 +11,9 @@ this three buttons must affect the object status in different amounts
 
 */
 
+//we are going to need to export the classes to main.js
 
+//make sure we have window['app'] = new App()
 
 
 
@@ -112,7 +114,7 @@ class Saw {
 var saw = new Saw();
 
 
-
+//below here is what the controler will perform
 $('#axeButton').on("click", function () {
     axe.swingAtTree();
 })
